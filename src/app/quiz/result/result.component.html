@@ -1,0 +1,64 @@
+<!-- <p>{{questions[0].answer}}</p> -->
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="d-flex flex-wrap justify-content-center">
+        <span class="topic">{{quizService.topic}} Quiz</span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+        <img src="../assets/img/congrats.jpg">
+    </div>
+    <div class="col-lg-6" style="float:none;margin:auto;text-align:center;">
+      <h4>Congratulations!!</h4>
+      <h4>You have completed the quiz.</h4>
+      <h4 style="padding-bottom:3px">Below is your result:</h4>
+      <p>Total Question Attempted:{{quizService.totalQuestionAttempted}}</p>
+      <p>Total Correct Answered:{{quizService.correctAnswerCount}}</p>
+      <p>Total Wrong Answered:{{quizService.totalWrongAnswered}}</p>
+      <p>Your Score:{{quizService.totalScore}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <h1 style="padding-top:2%">Questions with correct answer</h1>
+    <div class="col-lg-12 mt-4" *ngFor="let in of counter(quizService.qns.length);let i = index">
+      <div class="d-flex flex-wrap justify-content-between">
+        <p><span>{{i+1}}.</span>&nbsp;{{quizService.qns[i].question}}</p>
+        <p *ngIf="quizService.qns[i].answer===quizService.qns_bkp[i].answer">1M</p>
+        <p *ngIf="quizService.qns[i].answer!=quizService.qns_bkp[i].answer">0M</p>
+      </div>
+          <hr>
+          <ul class="options" style="list-style-type:none;padding:20px 10px;">
+              <!-- <li *ngIf="quizService.qns[i].option1.optionText !=null" [class.bg-green-color]="quizService.qns[i].option1.optionNo===quizService.qns_bkp[i].answer" [class.bg-red-color]="(quizService.qns[i].option1.optionNo===quizService.qns[i].answer)&&(quizService.qns[i].answer!=quizService.qns_bkp[i].answer)"> -->
+              <li *ngIf="quizService.qns[i].option1.optionText !=null">
+                {{quizService.qns[i].option1.optionText}}
+                <span *ngIf="(quizService.qns[i].option1.optionNo===quizService.qns[i].answer)&&(quizService.qns[i].answer!=quizService.qns_bkp[i].answer)" style="color:red;margin-right:20px;">Incorrect</span>
+                <span *ngIf="quizService.qns[i].option1.optionNo===quizService.qns_bkp[i].answer"><i class="fa-solid fa-1x fa-circle-check" style="color:green;margin-right:35px;"></i></span>
+              </li>
+              <hr *ngIf="quizService.qns[i].option2.optionText !=null && quizService.qns[i].option2.optionText !=''">
+              <!-- <li *ngIf="quizService.qns[i].option2.optionText !=null" [class.bg-green-color]="quizService.qns[i].option2.optionNo===quizService.qns_bkp[i].answer" [class.bg-red-color]="(quizService.qns[i].option2.optionNo===quizService.qns[i].answer)&&(quizService.qns[i].answer!=quizService.qns_bkp[i].answer)"> -->
+                <li *ngIf="quizService.qns[i].option2.optionText !=null">
+                {{quizService.qns[i].option2.optionText}}
+                <span *ngIf="(quizService.qns[i].option2.optionNo===quizService.qns[i].answer)&&(quizService.qns[i].answer!=quizService.qns_bkp[i].answer)" style="color:red;margin-right:20px;">Incorrect</span>
+                <span *ngIf="quizService.qns[i].option2.optionNo===quizService.qns_bkp[i].answer"><i class="fa-solid fa-1x fa-circle-check" style="color:green;margin-right:35px;"></i></span>
+              </li>
+              <hr *ngIf="quizService.qns[i].option3.optionText !=null && quizService.qns[i].option3.optionText !=''">
+              <!-- <li *ngIf="quizService.qns[i].option3.optionText !=null" [class.bg-green-color]="quizService.qns[i].option3.optionNo===quizService.qns_bkp[i].answer" [class.bg-red-color]="(quizService.qns[i].option3.optionNo===quizService.qns[i].answer)&&(quizService.qns[i].answer!=quizService.qns_bkp[i].answer)"> -->
+                <li *ngIf="quizService.qns[i].option3.optionText !=null">
+                {{quizService.qns[i].option3.optionText}}
+                <span *ngIf="(quizService.qns[i].option3.optionNo===quizService.qns[i].answer)&&(quizService.qns[i].answer!=quizService.qns_bkp[i].answer)" style="color:red;margin-right:20px;">Incorrect</span>
+                <span *ngIf="quizService.qns[i].option3.optionNo===quizService.qns_bkp[i].answer"><i class="fa-solid fa-1x fa-circle-check" style="color:green;margin-right:35px;"></i></span>
+              </li>
+              <hr *ngIf="quizService.qns[i].option4.optionText !=null && quizService.qns[i].option4.optionText !=''">
+              <!-- <li *ngIf="quizService.qns[i].option4.optionText !=null" [class.bg-green-color]="quizService.qns[i].option4.optionNo===quizService.qns_bkp[i].answer" [class.bg-red-color]="(quizService.qns[i].option4.optionNo===quizService.qns[i].answer)&&(quizService.qns[i].answer!=quizService.qns_bkp[i].answer)"> -->
+                <li *ngIf="quizService.qns[i].option4.optionText !=null">
+                {{quizService.qns[i].option4.optionText}}
+                <span *ngIf="(quizService.qns[i].option4.optionNo===quizService.qns[i].answer)&&(quizService.qns[i].answer!=quizService.qns_bkp[i].answer)" style="color:red;margin-right:20px;">Incorrect</span>
+                <span *ngIf="quizService.qns[i].option4.optionNo===quizService.qns_bkp[i].answer"><i class="fa-solid fa-1x fa-circle-check" style="color:green;margin-right:35px;"></i></span>
+              </li>
+          </ul>
+    </div>
+  </div>
+  </div>

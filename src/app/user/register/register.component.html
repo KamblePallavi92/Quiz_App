@@ -1,0 +1,37 @@
+<div class="container mt-5 mb-5">
+  <div class="row">
+    <div class="d-flex flex-wrap justify-content-center">
+      <div class="regBox">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2>Quizly <br>Registration</h2>
+          </div>
+          <div class="col-lg-6">
+            <h2><img src="../assets/img/registration.png"></h2>
+          </div>
+        </div>
+        <div class="row">
+        <div class="col-lg-12">
+          <form [formGroup]="regForm" (ngSubmit)="submitData()">
+            <label for="name" class="form-label">Name<span style="color:red;">*</span></label>
+            <input type="text" name="name" id="name" class="form-control mb-3" formControlName="name">
+            <div id="emailHelp" class="form-text text-danger mb-3" *ngIf="name.invalid && name.touched">
+              <span *ngIf="name.errors!['required']">Name is required</span>
+              <span *ngIf="name.errors!['minlength']">Name must be minimum 3 characters.</span>
+            </div>
+            <label for="email" class="form-label">Email<span style="color:red;">*</span></label>
+            <input type="email" name="email" id="email" class="form-control mb-3" formControlName="email">
+            <div id="emailHelp" class="form-text text-danger mb-3" *ngIf="email.invalid && email.touched">
+              <span *ngIf="email.errors!['required']">Email is required</span>
+              <span *ngIf="email.errors!['email']">Email is invalid</span>
+            </div>
+            <div class="d-flex flex-wrap justify-content-center">
+              <button type="submit" class="btn btn-secondary" [disabled]="regForm.invalid">Submit</button>
+            </div>
+          </form>
+        </div>
+    </div>
+    </div>
+    </div>
+  </div>
+</div>

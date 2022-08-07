@@ -1,0 +1,44 @@
+<div class="container mt-5 mb-5">
+  <div class="row">
+    <div class="d-flex flex-wrap justify-content-center">
+      <div class="contactBox">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 style="text-align:center;">Contact Us</h2>
+            <p style="text-align:center;">Got a question?We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+          </div>
+        </div>
+        <div class="row">
+        <div class="col-lg-12">
+          <form #feedbackForm="ngForm" (ngSubmit)="onSubmit(feedbackForm)">
+            <label for="name" class="form-label">Name<span style="color:red;">*</span></label>
+            <input type="text" name="name" id="name" class="form-control mb-3" [(ngModel)]="model.name" required minlength="3" #name="ngModel">
+            <div id="emailHelp" class="form-text text-danger mb-3" *ngIf="name.touched && name.invalid">
+              <span *ngIf="name.errors?.['required']">Name is required</span>
+              <span *ngIf="name.errors?.['minlength']">Name must be minimum 3 characters.</span>
+            </div>
+
+            <label for="email" class="form-label">Email<span style="color:red;">*</span></label>
+            <input type="email" name="email" id="email" class="form-control mb-3" [(ngModel)]="model.email" required email #email="ngModel">
+            <div id="emailHelp" class="form-text text-danger mb-3" *ngIf="email.touched && email.invalid">
+              <span *ngIf="email.errors?.['required']">Email is required</span>
+              <span *ngIf="email.errors?.['email']">Email is invalid</span>
+            </div>
+
+            <label for="message" class="form-label">Message<span style="color:red;">*</span></label>
+            <textarea cols="10" rows="3" name="message" id="message" class="form-control mb-3" [(ngModel)]="model.message" required #message="ngModel"></textarea>
+            <div id="emailHelp" class="form-text text-danger mb-3" *ngIf="message.invalid && message.touched">
+              <span *ngIf="message.errors?.['required']">Message is required</span>
+            </div>
+
+            <div class="d-flex flex-wrap justify-content-center">
+              <button type="submit" class="btn btn-secondary"[disabled]="feedbackForm.form.invalid">Send Message</button>
+            </div>
+          </form>
+        </div>
+    </div>
+    </div>
+    </div>
+  </div>
+</div>
+

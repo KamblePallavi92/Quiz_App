@@ -1,0 +1,17 @@
+.regBox{
+  //background-image:linear-gradient(180deg,rgba(40,82,122,.9),rgba(40,82,122,.9));
+  background-color: rgb(31, 141, 160,0.9);
+  color:#fff;
+  padding:20px 30px;
+  width:60%;
+}
+.ng-dirty.ng-invalid:not(form){
+  border-bottom: 2px solid red;
+}
+.ng-dirty.ng-valid:not(form){
+  border-bottom: 2px solid green;
+}
+img{
+  height:70%;
+  width:80%;
+}

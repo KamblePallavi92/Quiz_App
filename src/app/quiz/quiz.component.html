@@ -1,0 +1,69 @@
+<div class="container mt-5">
+  <div class="row" *ngIf="quizService.qns">
+    <div class="col-lg-12 titles">
+      <div class="d-flex flex-wrap justify-content-center">
+        <span class="topic">{{quizService.topic}} Quiz</span>
+      </div>
+    </div>
+    <div class="col-lg-12 titles">
+      <div class="d-flex flex-wrap justify-content-between">
+        <span>Question&nbsp;{{quizService.qnProgress+1}}&nbsp;of&nbsp;{{quizService.qns.length}}</span>
+        <span>Time Left : {{displayTimeGiven()}}</span>
+      </div>
+    </div>
+    <div class="col-lg-12 mt-4">
+          <p><span>{{quizService.qnProgress+1}}.</span>&nbsp;{{quizService.qns[quizService.qnProgress].question}}</p>
+          <hr>
+          <!-- <ul class="options" style="list-style-type:none;padding:20px 10px;">
+            <ng-container> -->
+              <!-- <li *ngIf="quizService.qns[quizService.qnProgress].option1 !=null" (click)="Answer(quizService.qns[quizService.qnProgress].questionId,1)"> -->
+                <!-- <li *ngIf="quizService.qns[quizService.qnProgress].option1 !=null" (click)="Answer(quizService.qns[quizService.qnProgress].questionId,1)">
+                {{quizService.qns[quizService.qnProgress].option1}}
+              </li>
+              <hr *ngIf="quizService.qns[quizService.qnProgress].option2 !=null && quizService.qns[quizService.qnProgress].option2 !=''">
+              <li *ngIf="quizService.qns[quizService.qnProgress].option2 !=null" (click)="Answer(quizService.qns[quizService.qnProgress].questionId,1)">
+                {{quizService.qns[quizService.qnProgress].option2}}
+              </li>
+              <hr *ngIf="quizService.qns[quizService.qnProgress].option3 !=null && quizService.qns[quizService.qnProgress].option3 !=''">
+              <li *ngIf="quizService.qns[quizService.qnProgress].option3 !=null" (click)="Answer(quizService.qns[quizService.qnProgress].questionId,1)">
+                {{quizService.qns[quizService.qnProgress].option3}}
+              </li>
+              <hr *ngIf="quizService.qns[quizService.qnProgress].option3 !=null && quizService.qns[quizService.qnProgress].option4 !=''">
+              <li *ngIf="quizService.qns[quizService.qnProgress].option4 !=null" (click)="Answer(quizService.qns[quizService.qnProgress].questionId,1)">
+                {{quizService.qns[quizService.qnProgress].option4}}
+              </li>
+            </ng-container>
+          </ul> -->
+          <div class="btn-group-vertical options" style="width:100%;padding:1rem 0 1rem 0;" role="group" aria-label="Basic radio toggle button group">
+            <input *ngIf="quizService.qns[quizService.qnProgress].option1.optionText !=null" type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" >
+            <label *ngIf="quizService.qns[quizService.qnProgress].option1.optionText !=null" class="btn btn1" for="btnradio1" (click)="Answer(quizService.qns[quizService.qnProgress].questionId,quizService.qns[quizService.qnProgress].option1.optionNo)">
+              {{quizService.qns[quizService.qnProgress].option1.optionText}}
+              <hr *ngIf="quizService.qns[quizService.qnProgress].option2.optionText !=null && quizService.qns[quizService.qnProgress].option2.optionText !=''">
+            </label>
+            <input *ngIf="quizService.qns[quizService.qnProgress].option2.optionText !=null" type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" >
+            <label *ngIf="quizService.qns[quizService.qnProgress].option2.optionText !=null" class="btn btn1" for="btnradio2" (click)="Answer(quizService.qns[quizService.qnProgress].questionId,quizService.qns[quizService.qnProgress].option2.optionNo)">
+              {{quizService.qns[quizService.qnProgress].option2.optionText}}
+              <hr *ngIf="quizService.qns[quizService.qnProgress].option3.optionText !=null && quizService.qns[quizService.qnProgress].option3.optionText !=''">
+            </label>
+            <input *ngIf="quizService.qns[quizService.qnProgress].option3.optionText !=null" type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" >
+            <label *ngIf="quizService.qns[quizService.qnProgress].option3.optionText !=null" class="btn btn1" for="btnradio3" (click)="Answer(quizService.qns[quizService.qnProgress].questionId,quizService.qns[quizService.qnProgress].option3.optionNo)">
+              {{quizService.qns[quizService.qnProgress].option3.optionText}}
+              <hr *ngIf="quizService.qns[quizService.qnProgress].option4.optionText !=null && quizService.qns[quizService.qnProgress].option4.optionText !=''">
+            </label>
+            <input *ngIf="quizService.qns[quizService.qnProgress].option4.optionText !=null" type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" >
+            <label *ngIf="quizService.qns[quizService.qnProgress].option4.optionText !=null" class="btn btn1" for="btnradio4" (click)="Answer(quizService.qns[quizService.qnProgress].questionId,quizService.qns[quizService.qnProgress].option4.optionNo)">
+              {{quizService.qns[quizService.qnProgress].option4.optionText}}
+            </label>
+          </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="d-flex flex-wrap justify-content-around">
+        <button class="btn" (click)="previousQn()" [disabled]="quizService.qnProgress===0"><i class="fas text-light fa-2x fa-chevron-left"></i></button>
+        <button class="btn" (click)="resetQuiz()"><i class="fas text-light fa-2x fa-sync-alt"></i></button>
+        <!-- <button class="btn" (click)="nextQn()" [disabled]="quizService.qnProgress===quizService.qns.length-1"><i class="fas text-light fa-2x fa-chevron-right"></i></button> -->
+        <button class="btn" (click)="nextQn()"><i class="fas text-light fa-2x fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+</div>
