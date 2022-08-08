@@ -12,7 +12,8 @@ export class QuizService{
     private http:HttpClient
   ){}
   //-----------------Properties-------------------------
-  readonly rootUrl =  "http://localhost:4200/assets/questions.json"
+  // readonly rootUrl =  "http://localhost:4200/assets/questions.json"
+  readonly rootUrl =  "assets/questions.json"
   userName!:string
   qns!:QuestionsInterface[]
   qns_bkp!:QuestionsInterface[]
