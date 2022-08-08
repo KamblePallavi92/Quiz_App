@@ -1,0 +1,435 @@
+[
+  {
+    "topicId":1,
+    "topicName":"Python",
+    "Questions":[
+      {
+      "questionId":1,
+      "question":"What is the maximum length of a Python identifier?",
+      "option1":{
+        "optionText":"32",
+        "optionNo":1
+      },
+      "option2":{
+        "optionText":"16",
+        "optionNo":2
+      },
+      "option3":{
+        "optionText":"128",
+        "optionNo":3
+      },
+      "option4":{
+        "optionText":"No fixed length is specified.",
+        "optionNo":4
+      },
+      "answer":4
+    },
+    {
+      "questionId":2,
+      "question":"How is a code block indicated in Python?",
+      "option1":{
+        "optionText":"Brackets.",
+        "optionNo":1
+      },
+      "option2":{
+        "optionText":"Indentation.",
+        "optionNo":2
+      },
+      "option3":{
+        "optionText":"Key",
+        "optionNo":3
+      },
+      "option4":{
+        "optionText":"None of the above.",
+        "optionNo":4
+      },
+      "answer":2
+    },
+    {
+      "questionId":3,
+      "question":"Which of the following concepts is not a part of Python?",
+      "option1":{
+        "optionText":"Pointers.",
+        "optionNo":1
+      },
+      "option2":{
+        "optionText":"Loops.",
+        "optionNo":2
+      },
+      "option3":{
+        "optionText":"Dynamic Typing.",
+        "optionNo":3
+      },
+      "option4":{
+        "optionText":"All of the above.",
+        "optionNo":4
+      },
+      "answer":1
+    },
+    {
+      "questionId":4,
+      "question":"Which of the following statements are used in Exception Handling in Python?",
+      "option1":{
+        "optionText":"try",
+        "optionNo":1
+      },
+      "option2":{
+        "optionText":"except",
+        "optionNo":2
+      },
+      "option3":{
+        "optionText":"finally",
+        "optionNo":3
+      },
+      "option4":{
+        "optionText":"All of the above.",
+        "optionNo":4
+      },
+      "answer":4
+    },
+    {
+      "questionId":5,
+      "question":"Which of the following types of loops are not supported in Python?",
+      "option1":{
+        "optionText":"for",
+        "optionNo":1
+      },
+      "option2":{
+        "optionText":"while",
+        "optionNo":2
+      },
+      "option3":{
+        "optionText":"do-while",
+        "optionNo":3
+      },
+      "option4":{
+        "optionText":"None of the above.",
+        "optionNo":4
+      },
+      "answer":3
+    },
+    {
+      "questionId":6,
+      "question":"Which of the following is the proper syntax to check if a particular element is present in a list?",
+      "option1":{
+        "optionText":"if ele in list",
+        "optionNo":1
+      },
+      "option2":{
+        "optionText":"if not ele not in list",
+        "optionNo":2
+      },
+      "option3":{
+        "optionText":"Both A and B",
+        "optionNo":3
+      },
+      "option4":{
+        "optionText":"None of the above",
+        "optionNo":4
+      },
+      "answer":3
+    },
+    {
+      "questionId":7,
+      "question":"Which of the following functions converts date to corresponding time in Python?",
+      "option1":{
+        "optionText":"strptime()",
+        "optionNo":1
+      },
+      "option2":{
+        "optionText":"strftime()",
+        "optionNo":2
+      },
+      "option3":{
+        "optionText":"both A and B",
+        "optionNo":3
+      },
+      "option4":{
+        "optionText":"None of the above",
+        "optionNo":4
+      },
+      "answer":1
+    },
+    {
+      "questionId":8,
+      "question":"As what datatype are the *args stored, when passed into a function?",
+      "option1":{
+        "optionText":"List",
+        "optionNo":1
+      },
+      "option2":{
+        "optionText":"Tuple",
+        "optionNo":2
+      },
+      "option3":{
+        "optionText":"Dictionary",
+        "optionNo":3
+      },
+      "option4":{
+        "optionText":"None of the above",
+        "optionNo":4
+      },
+      "answer":2
+    },
+    {
+      "questionId":9,
+      "question":"As what datatype are the *kwargs stored, when passed into a function?",
+      "option1":{
+        "optionText":"Lists",
+        "optionNo":1
+      },
+      "option2":{
+        "optionText":"Tuples",
+        "optionNo":2
+      },
+      "option3":{
+        "optionText":"Dictionary",
+        "optionNo":3
+      },
+      "option4":{
+        "optionText":"None of the above",
+        "optionNo":4
+      },
+      "answer":3
+    },
+    {
+      "questionId":10,
+      "question":"Which of the following blocks will always be executed whether an exception is encountered or not in a program?",
+      "option1":{
+        "optionText":"try",
+        "optionNo":1
+      },
+      "option2":{
+        "optionText":"except",
+        "optionNo":2
+      },
+      "option3":{
+        "optionText":"finally",
+        "optionNo":3
+      },
+      "option4":{
+        "optionText":"None of these",
+        "optionNo":4
+      },
+      "answer":3
+    }
+  ]
+  },
+  {
+    "topicId":2,
+    "topicName":"AngularJS",
+    "Questions":[
+      {
+      "questionId":1,
+      "question":"AngularJS is a ____",
+      "option1":{
+        "optionText":"Java framework",
+        "optionNo":1
+      },
+      "option2":{
+        "optionText":"JavaScript framework",
+        "optionNo":2
+      },
+      "option3":{
+        "optionText":"HTML framework",
+        "optionNo":3
+      },
+      "option4":{
+        "optionText":"SQL framework",
+        "optionNo":4
+      },
+      "answer":2
+    },
+    {
+      "questionId":2,
+      "question":"AngularJS is perfect for?",
+      "option1":{
+        "optionText":"MPAs",
+        "optionNo":1
+      },
+      "option2":{
+        "optionText":"DPAs",
+        "optionNo":2
+      },
+      "option3":{
+        "optionText":"CPAs",
+        "optionNo":3
+      },
+      "option4":{
+        "optionText":"SPAs",
+        "optionNo":4
+      },
+      "answer":4
+    },
+    {
+      "questionId":3,
+      "question":"Among the following, on which architectural pattern is AngularJS based?",
+      "option1":{
+        "optionText":"Decorator pattern",
+        "optionNo":1
+      },
+      "option2":{
+        "optionText":"Observer pattern",
+        "optionNo":2
+      },
+      "option3":{
+        "optionText":"MVVM architecture pattern.",
+        "optionNo":3
+      },
+      "option4":{
+        "optionText":"MVC architecture pattern.",
+        "optionNo":4
+      },
+      "answer":3
+    },
+    {
+      "questionId":4,
+      "question":"State whether true or false:  AngularJS provides reusable components",
+      "option1":{
+        "optionText":"True",
+        "optionNo":1
+      },
+      "option2":{
+        "optionText":"False",
+        "optionNo":2
+      },
+      "option3":{
+        "optionText":"",
+        "optionNo":3
+      },
+      "option4":{
+        "optionText":"",
+        "optionNo":4
+      },
+      "answer":1
+    },
+    {
+      "questionId":5,
+      "question":"Choose the correct syntax for writing AngularJS expression.",
+      "option1":{
+        "optionText":"[expression]",
+        "optionNo":1
+      },
+      "option2":{
+        "optionText":"{{expressions}}",
+        "optionNo":2
+      },
+      "option3":{
+        "optionText":"{{{expressions}}}",
+        "optionNo":3
+      },
+      "option4":{
+        "optionText":"{expressions}",
+        "optionNo":4
+      },
+      "answer":2
+    },
+    {
+      "questionId":6,
+      "question":"Choose the reactor which is used to bind the application data to the HTML view in AngularJS.",
+      "option1":{
+        "optionText":"ng-bind directive",
+        "optionNo":1
+      },
+      "option2":{
+        "optionText":"ng-model directive",
+        "optionNo":2
+      },
+      "option3":{
+        "optionText":"ng-init directive",
+        "optionNo":3
+      },
+      "option4":{
+        "optionText":"ng-app directive",
+        "optionNo":4
+      },
+      "answer":1
+    },
+    {
+      "questionId":7,
+      "question":"Choose the correct statement about the lowercase filter.",
+      "option1":{
+        "optionText":"it is a function that takes text as input",
+        "optionNo":1
+      },
+      "option2":{
+        "optionText":"the lowercase filter converts a text to lowercase text",
+        "optionNo":2
+      },
+      "option3":{
+        "optionText":"both a and b",
+        "optionNo":3
+      },
+      "option4":{
+        "optionText":"none of the above",
+        "optionNo":4
+      },
+      "answer":2
+    },
+    {
+      "questionId":8,
+      "question":"Choose the advantage of Angular JS among the following.",
+      "option1":{
+        "optionText":"it provides reusable components",
+        "optionNo":1
+      },
+      "option2":{
+        "optionText":"it uses dependency injection and makes use of separation of concerns",
+        "optionNo":2
+      },
+      "option3":{
+        "optionText":"it is unit-testable",
+        "optionNo":3
+      },
+      "option4":{
+        "optionText":"all of the above",
+        "optionNo":4
+      },
+      "answer":4
+    },
+    {
+      "questionId":9,
+      "question":"The functionality of angular controllers in the application is",
+      "option1":{
+        "optionText":"an angular controller is used for displaying the data",
+        "optionNo":1
+      },
+      "option2":{
+        "optionText":"an angular controller is used for controlling the data",
+        "optionNo":2
+      },
+      "option3":{
+        "optionText":"both a and b",
+        "optionNo":3
+      },
+      "option4":{
+        "optionText":"None of the above",
+        "optionNo":4
+      },
+      "answer":2
+    },
+    {
+      "questionId":10,
+      "question":"The syntax used to create a module in AngularJS is:",
+      "option1":{
+        "optionText":"module(“app”,[])",
+        "optionNo":1
+      },
+      "option2":{
+        "optionText":"var myModule=angular.module();",
+        "optionNo":2
+      },
+      "option3":{
+        "optionText":"var myModule = new Module();",
+        "optionNo":3
+      },
+      "option4":{
+        "optionText":"None of the above",
+        "optionNo":4
+      },
+      "answer":1
+    }
+  ]
+  }
+
+]
